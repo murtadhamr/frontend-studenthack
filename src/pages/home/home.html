@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card *ngFor = "let data of timeline">
+
+    <ion-item>
+      <ion-avatar item-left>
+        <img [src]="data.avatar">
+      </ion-avatar>
+      <h2>1
+        {{data.nama}}
+      </h2>
+      <p>{{data.waktu}}</p>
+    </ion-item>
+
+    <ion-card-content>
+      <p>Mau nanya pr RPL dong</p>
+      <img [src] = "data.gambar">
+      <p>{{data.hashtag}}</p>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <!--<div *ngIf="data.user_id != user.id && data.status_liked == false"> -->
+        <button ion-button icon-left clear small (click)="likePosting()">
+          <ion-icon name="thumbs-up">
+          </ion-icon>
+          <div>{{jumlah_like}} like</div>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-left clear small>
+          <ion-icon name="text"></ion-icon>
+          <div>4 Comments</div>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-fab right bottom>
+    <button ion-fab color="light" (click)="tambahPosting()"><ion-icon name="create"></ion-icon></button>
+  </ion-fab>
+</ion-content>
