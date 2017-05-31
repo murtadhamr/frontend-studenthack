@@ -9,7 +9,8 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ChatPage } from '../pages/chat/chat';
 import { AddPostPage } from '../pages/add-post/add-post';
-import { LoginPage } from '../pages/login/login';
+import { CommentPage } from '../pages/comment/comment';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +23,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     ChatPage,
     AddPostPage,
-    LoginPage
+    CommentPage 
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     ChatPage,
     AddPostPage,
-    LoginPage
+    CommentPage
   ],
   providers: [
     StatusBar,
